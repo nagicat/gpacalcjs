@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA calculator</title>
+</head>
+<body>
+    <h1>GPA calculator</h1>
+    <div id="scoreInputs">
+        <div>
+            <span>S</span>
+            <input type="number" id="scoreS">
+        </div>
+        <div>
+            <span>A</span>
+            <input type="number" id="scoreA">
+        </div>
+        <div>
+            <span>B</span>
+            <input type="number" id="scoreB">
+        </div>
+        <div>
+            <span>C</span>
+            <input type="number" id="scoreC">
+        </div>
+        <div>
+            <span>F</span>
+            <input type="number" id="scoreF">
+        </div>
+    </div>
+    <div>
+        <span id="gpa">0</span>
+    </div>
+
+    <div>
+        <p>
+            S=4, A=3, B=2, A=1, F=0
+        </p>
+    </div>
+
+    <script type="module">
+        import { GpaCalc } from "https://cdn.jsdelivr.net/gh/nagicat/gpacalcjs@0.0.1-a.2/dist/gpa-calc.js"
+
+        const gc = new GpaCalc([4,3,2,1,0]);
+
+        document.getElementById("scoreInputs").addEventListener("input", () => {
+            const s = document.getElementById("scoreS").value;
+            const a = document.getElementById("scoreA").value;
+            const b = document.getElementById("scoreB").value;
+            const c = document.getElementById("scoreC").value;
+            const f = document.getElementById("scoreF").value;
+
+            document.getElementById("gpa").textContent = gc.calc([s, a, b, c, f]); 
+        });
+    </script>
+</body>
+</html>
