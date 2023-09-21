@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/nagicat/gpacalcjs@0.0.1-a.2/dist/gpa-calc.js"></script>
+</head>
+<body>
+    <script>
+        import { GpaCalc } from "https://cdn.jsdelivr.net/gh/nagicat/gpacalcjs@0.0.1-a.2/dist/gpa-calc.js"
+
+        const gc = new GpaCalc([4,3,2,1,0]);
+        console.log(gc.calc([8,2,1,0,3]));
+    </script>
+</body>
+</html>

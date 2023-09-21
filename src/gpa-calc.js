@@ -1,9 +1,9 @@
 /*
-Version: v0.0.1.a
+Version: v0.0.1-a.2
 License: MIT License(https://github.com/nagicat/gpacalcjs)
 */
 
-class GpaCalc {
+export class GpaCalc {
     constructor(points) {
         if ( !Array.isArray(points) ) {
             throw new Error("GPACalcJS: ERROR: input type is not Array.");
