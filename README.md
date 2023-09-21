@@ -1,7 +1,10 @@
 # GPACalcJS
 GPAを計算します。
 
-## Example
+## Example site
+[Github Pages↗](https://nagicat.github.io/gpacalcjs/)
+
+## Example code
 ### Deno
 ```js
 import { GpaCalc } from "https://cdn.jsdelivr.net/gh/nagicat/gpacalcjs@0.0.1-a.2/dist/gpa-calc.js"
